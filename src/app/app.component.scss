@@ -1,0 +1,185 @@
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px;
+   /* Asegura espacio para el chat */
+  position: relative; /* Para posicionar los círculos relativos a este contenedor */
+  // background: white; /* Color de fondo para mejor visibilidad de los círculos */
+  z-index: 0;
+  &.logged-in {
+    // margin-right: 30%;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vh;
+    background: transparent;
+  }
+  &.logged-out {
+    margin-right: 0;
+    height: 100%;
+  }
+}
+
+.chat-container {
+  
+  width: 40%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  border-left: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+h1 {
+  font-size: 12vw;
+  color: #fff;
+}
+.container {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  width: 100%;
+  min-height: 150%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: url('/assets/bg.png');
+  background: linear-gradient(to right, rgb(201,48,107), rgb(1,87,174));
+  background-size: cover;
+}
+.wave {
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url('/assets/wave.png');
+  background-repeat: repeat-x;
+  background-size: 100%;
+  animation: wave 8s linear infinite;
+}
+.wave::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url('/assets/wave.png');
+  background-repeat: repeat-x;
+  background-size: 100%;
+  opacity: .2;
+  animation: wave-reverse 8s linear infinite;
+}
+.wave::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  padding-top: 12%;
+  top: -5px;
+  left: 0;
+  background-image: url('/assets/wave.png');
+  background-repeat: repeat-x;
+  background-size: 100%;
+  opacity: .8;
+  animation-delay: -4s;
+  animation: wave 16s linear infinite;
+}
+@keyframes wave {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: 100vw;
+  }
+}
+@keyframes wave-reverse {
+  0% {
+    background-position: 100vw;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+.fa-solid{
+  color: white;
+  width: 100%;
+}
+
+.chat-toggle-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(201,48,107);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background-color: rgb(142, 37, 37);
+  }
+}
+.chat-toggle-button-close{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: rgb(201,48,107);
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  // box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    color: rgb(142, 37, 37);
+  }
+}
+
+.chat-view {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 25%;
+  max-height: 70vh;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(201,48,107);
+  color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: #c14444;
+  }
+}

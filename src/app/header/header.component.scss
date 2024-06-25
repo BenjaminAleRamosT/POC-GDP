@@ -1,0 +1,75 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #004a8f; // Fondo azul por defecto
+  overflow-x: hidden;
+  transition: width 0.5s;
+  z-index: 1000; // Asegura que está sobre otros elementos
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // Centrar elementos verticalmente
+
+
+  &.open {
+    width: 300px; // Hacer la barra más ancha
+    border-right: 0; // Remover bordes redondeados del lado derecho
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-radius: 20px;
+
+  }
+
+  .menu-button {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    font-size: 30px;
+    background-color: transparent; // Fondo transparente
+    color: #004a8f; // Ícono en rojo
+    &.open {
+      color: white;
+    }
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px; // Aumentar el área clickable
+    z-index: 1001; // Más alto que la barra lateral
+  }
+
+  .nav-link {
+    height: 60px; // Altura fija para cada elemento de navegación
+    padding: 0 32px; // Padding sólo en los lados, no en altura
+    line-height: 60px; // Asegurar que el texto esté centrado verticalmente
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: background-color 0.3s;
+    margin-bottom: 10px; // Espaciado entre elementos
+    border-radius: 30px 0 0 30px; // Semicírculo perfecto usando la mitad de la altura
+    margin-left: 25px;
+
+    &:hover {
+      color: #f0f0f0;
+      background-color: white; // Agrega un fondo rojo para alta visibilidad al hover
+    }
+  }
+
+  .active-link {
+    background-color: white;
+    color: black;
+    border-radius: 30px 0 0 30px; // Semicírculo perfecto en el lado izquierdo
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: #004a8f;
+    color: white;
+  }
+}

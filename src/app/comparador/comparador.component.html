@@ -1,0 +1,37 @@
+<div>
+  <app-header class="sidebar"></app-header>
+</div>
+<div class="comparador-container">
+  <h1>Comparador</h1>
+
+
+  <!-- <select [(ngModel)]="option1" class="styled-select">
+    <option *ngFor="let option of ['BanChile', 'BCI', 'Fintual', 'Santander']" [value]="option">{{option}}</option>
+  </select>
+
+  <select [(ngModel)]="option2" class="styled-select">
+    <option *ngFor="let option of ['BanChile', 'BCI', 'Fintual', 'Santander']" [value]="option">{{option}}</option>
+  </select> -->
+  <div class="comparador-config">
+    <app-custom-select class="custom-select" [selectionKey]="'option1'"></app-custom-select>
+    <app-custom-select class="custom-select" [selectionKey]="'option2'"></app-custom-select>
+
+    <app-send-button [selectedOption]="[option1, option2]" [messageText]="message" [messageContext]=2
+      (sendComplete)="handleSendComplete($event)">
+    </app-send-button>
+  </div>
+  <!-- 
+  <button (click)="onSend()" class="styled-button">Enviar</button> -->
+
+  <div *ngIf="loading" class="loading-indicator">
+    <mat-spinner diameter="30"></mat-spinner>
+  </div>
+
+  <div class="response-container" *ngIf="response && !loading">
+    <div [innerHTML]="response | markdown"></div>
+  </div>
+
+</div>
+<app-export-pdf [fileName]="pdfName + option1 + '_' +option2" [contentHtml]="response | markdown" *ngIf="response && !loading"></app-export-pdf>
+
+  <!-- <app-export-pdf [fileName]="pdfName + option1 + '_' +option2" [contentHtml]="ejemplo"></app-export-pdf> -->

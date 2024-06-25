@@ -1,0 +1,26 @@
+<div class="main-content" [ngClass]="{'logged-in': isLogged, 'logged-out': !isLogged}">
+  <div class="main-views">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Botón flotante para abrir/cerrar el chat -->
+<div *ngIf="isLogged" class="chat-toggle-button" (click)="toggleChat()">
+  <!-- <span *ngIf="!isChatOpen">💬</span> -->
+  <i *ngIf="!isChatOpen" class="fas fa-comment-alt"></i>
+</div>
+
+<!-- Chat flotante -->
+<div *ngIf="isChatOpen" class="chat-view">
+  
+  <div *ngIf="isLogged" class="chat-toggle-button-close" (click)="toggleChat()">
+    <!-- <span *ngIf="!isChatOpen">💬</span> -->
+    <i *ngIf="isChatOpen" class="fa fa-chevron-down"></i>
+  </div>
+
+  <app-chat></app-chat>
+</div>
+
+  <div class="container">
+    <div class="wave"></div>
+  </div>

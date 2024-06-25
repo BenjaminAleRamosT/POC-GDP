@@ -1,0 +1,24 @@
+<form id="app-cover">
+  <div id="select-box">
+    <input type="checkbox" id="options-view-button">
+    <div id="select-button" class="brd">
+      <div id="selected-value">
+        <span>Selecciona una entidad</span>
+      </div>
+      <div id="chevrons">
+        <i class="fas fa-chevron-up"></i>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </div>
+    <div id="options">
+      <div *ngFor="let option of options" class="option" [ngStyle]="{'--option-color': option.color}">
+        <input class="s-c top" type="radio" name="platform" [value]="option.name.toLowerCase()" (change)="onOptionChange(option.name.toLowerCase()); closeSelect()">
+        <input class="s-c bottom" type="radio" name="platform" [value]="option.name.toLowerCase()" (change)="onOptionChange(option.name.toLowerCase()); closeSelect()">
+        <i [class]="option.icon"></i>
+        <span class="label">{{ option.name }}</span>
+        <span class="opt-val">{{ option.name }}</span>
+      </div>
+      <div id="option-bg"></div>
+    </div>
+  </div>
+</form>

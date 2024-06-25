@@ -1,0 +1,10 @@
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <button class="menu-button" (click)="toggleSidebar()" [class.open]="isSidebarOpen">☰</button>
+  <div class="nav-link" routerLink="/dashboard" routerLinkActive="active-link" #dashboard>Panel</div>
+  <div class="nav-link" routerLink="/resumidor" routerLinkActive="active-link" #resumidor>Resumidor</div>
+  <div class="nav-link" routerLink="/comparador" routerLinkActive="active-link" #comparador>Comparador</div>
+  <a class="logout" routerLink="/">Logout</a>
+</div>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

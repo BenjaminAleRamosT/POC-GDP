@@ -1,0 +1,113 @@
+h1 {
+  color: white;
+  text-align: left;
+
+} 
+
+.resumidor-container {
+  margin-top: 10%;
+  margin-right: 30%;
+  margin-left: 20%;
+  background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(10px); /* Desenfoque del fondo para Safari */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Borde con transparencia */
+  min-height: 500px; /* Altura mínima de 100% de la vista */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box; /* Incluye el padding en el cálculo del tamaño */
+}
+
+.resumidor-config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para distribuir el espacio entre los elementos */
+  padding: 20px;
+}
+.custom-select{
+  margin-right: 40px;
+}
+.send-button{
+  margin-top: 25px;
+}
+.styled-select {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.styled-button {
+  background-color: transparent;
+  color: white;
+  border: 2 px;
+  border-color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  border-color: #c14444;
+}
+
+.response-container {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px; 
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.333);
+}
+
+.response-content {
+  
+  h2, h3, h4 {
+    color: #ff6969;
+    margin-top: 10px;
+  }
+
+  p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  // background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+

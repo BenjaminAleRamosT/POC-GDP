@@ -1,0 +1,21 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let message of messages" class="message">
+      <div class="profile-circle">{{ getInitial(message.question) }}</div>
+      <div class="message-content">
+        <div class="message-question">
+          <p><strong>Tú:</strong> {{ message.question }}</p>
+        </div>
+        <div *ngIf="message.response" class="message-response">
+          <p><strong>Respuesta:</strong></p>
+          <div [innerHTML]="message.response.natural_response | markdown"></div>
+          <app-chart *ngIf="message.response.chart" [message]="message.response.chart"></app-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="input-container">
+    <input [(ngModel)]="userInput" placeholder="Escribe tu mensaje aquí" />
+    <button (click)="sendMessage()">Enviar</button>
+  </div>
+</div>

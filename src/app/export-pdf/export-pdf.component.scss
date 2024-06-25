@@ -1,0 +1,32 @@
+/* Estilos para el botón flotante circular */
+#content{
+    position: absolute;
+  left: -9999px;
+}
+.float-button {
+    position: fixed; /* Cambiado de absolute a fixed */
+    bottom: 20px; /* Ajusta según la posición deseada */
+    left: 50px; /* Cambiado de right a left */
+    width: 60px;
+    height: 60px;
+    background-color: rgb(1,87,174); /* Cambia esto al color que prefieras */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    z-index: 9999;
+}
+
+.float-button:hover {
+    background-color: rgb(0, 58, 116); /* Cambia esto al color que prefieras */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.float-button i {
+    font-size: 24px;
+}

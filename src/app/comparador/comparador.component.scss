@@ -1,0 +1,110 @@
+/* Estilos globales y h1 */
+h1 {
+  color: white;
+  text-align: center;
+}
+
+ 
+/* Estilo para el contenedor principal con fondo transparente y desenfoque */
+.comparador-container {
+  margin-top: 10%;
+  margin-right: 30%; 
+  margin-left: 20%;
+  background: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+  backdrop-filter: blur(10px); /* Desenfoque del fondo */
+  -webkit-backdrop-filter: blur(10px); /* Desenfoque del fondo para Safari */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 3px solid rgba(255, 255, 255, 0.3); /* Borde con transparencia */
+  min-height: 500px; /* Altura mínima de 100% de la vista */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.comparador-config {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Para distribuir el espacio entre los elementos */
+}
+.custom-select{
+  margin-right: 20px;
+}
+.send-button{
+  margin-top: 25px;
+}
+/* Estilo para el select */
+.styled-select {
+  width: 100%; /* Cambiado a 100% para ocupar todo el ancho disponible */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el botón */
+.styled-button {
+  background-color: #004a8f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-button:hover {
+  background-color: #004a8f;
+}
+
+/* Contenedor de respuesta */
+.response-container {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Contenido de la respuesta */
+.response-content {
+  h2, h3, h4 {
+    color: #004a8f;
+    margin-top: 10px;
+  }
+
+  p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+}
+
+/* Estilos para el contenedor y el indicador de carga */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.loading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
