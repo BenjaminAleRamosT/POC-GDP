@@ -1,0 +1,8 @@
+runtime: python37
+api_version: 1
+handlers:
+- url: /
+  static_files: dist/poc-gdp/index.html
+  upload: dist/poc-gdp/index.html
+- url: /
+  static_dir: dist/poc-gdp
